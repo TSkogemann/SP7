@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div ng-repeat="course in ctrl.studentsInfo.allCourses">
+            <div class="col-xs-2">{{course.courseName}}</div>
+        </div>
+        <div class="col-xs-2">Average</div>
+    </div>
+
+    <div class="row" ng-repeat="person in ctrl.studentsInfo.students">
+        <div class="col-xs-4">{{person.name}}</div>
+        <div ng-repeat="grade in person.grades">
+            <div class="col-xs-2">{{grade.grade}}</div>
+        </div>
+        <div class ="col-xs-2">{{person.grades| averageGrade}}</div>
+    </div>
+</div>
